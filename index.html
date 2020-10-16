@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function() {
+            $("a").click(function() {
+                var tweetMe = "https://twitter.com/intent/tweet?text="
+                $("#tweet-quote").attr(
+                    'href',
+                    tweetMe +
+                    encodeURIComponent(quotes[number].quote + " " + quotes[number].name)
+                );
+            });
+
+            $("#new-quote").click(function random() {
+                number = Math.floor(Math.random() * quotes.length)
+                $("#author").text(quotes[number].name)
+                $("#text").text(quotes[number].quote).fadeIn(350);
+                $("img").attr('src', quotes[number].url).hide().fadeIn(350);;
+            })
+
+
+
+        });
+        let quotes = [{
+            name: "Mahatma Ghandi",
+            quote: '"Happiness is when what you think, what you say, and what you do are in harmony."',
+            url: "https://www.educima.com/dibujo-para-colorear-mahatma-gandhi-dm30409.jpg"
+        }, {
+            name: "Martin Luther King",
+            quote: '"Every man must decide whether he will walk in the light of creative altruism or in the darkness of destructive selfishness."',
+            url: "https://gacetaintercultural.files.wordpress.com/2009/01/martin-luther-king-jr.jpg"
+        }, {
+            name: "Winston Churchiln",
+            quote: '"It has been said that Democracy is the worst form of government except all those other forms that have been tried from time to time."',
+            url: "https://i.pinimg.com/564x/7c/1d/ff/7c1dffc10b7c6006ec1ff58264d1d436.jpg"
+        }, {
+            name: "Elon Musk",
+            quote: '"I think it is possible for ordinary people to choose to be extraordinary."',
+            url: "https://st2.depositphotos.com/1319708/11326/v/950/depositphotos_113264874-stock-illustration-elon-musk-business-magnate-and.jpg"
+
+        }, {
+            name: "Napoleon Bonaparte",
+            quote: '"Take time to deliberate, but when the time for action has arrived, stop thinking and go in."',
+            url: "https://thumbs.dreamstime.com/b/retrato-de-napoleon-bonaparte-70856926.jpg"
+        }, {
+            name: "The Dude",
+            quote: '"Yeah, well, you know, that’s just, like, your opinion, man."',
+            url: "https://images.fineartamerica.com/images-medium-large-5/the-dude-guido-prussia.jpg"
+        }, {
+            name: "Miles Davis",
+            quote: '"Don\'t play what\'s there; play what\'s not there."',
+            url: "https://www.lafiambrera.net/wp-content/uploads/2017/03/miles-davis-2.jpg"
+        }, {
+            name: "Madonna",
+            quote: '"If your joy is derived from what society thinks of you, you\'re always going to be disappointed."',
+            url: "https://images6.alphacoders.com/545/thumb-1920-545507.jpg"
+        }]
+
+        function random() {
+            return Math.floor(Math.random() * quotes.length)
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper" id="quote-box">
+        <div class="quote">
+            <h1 id="text">“Happiness is when what you think, what you say, and what you do are in harmony.”</h1>
+            <h2 id="author">Mahatma Ghandi</h2>
+            <div class="buttons">
+                <a href="https://twitter.com/intent/tweet?text=%E2%80%9CHappiness%20is%20when%20what%20you%20think%2C%20what%20you%20say%2C%20and%20what%20you%20do%20are%20in%20harmony.%E2%80%9D%20Mahatma%20Ghandi" class="button" id="tweet-quote" title="Tweet quote!"
+                    target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <button class="button" id="new-quote">New quote</button>
+            </div>
+        </div>
+        <div class="image">
+            <img id="images" src="https://www.educima.com/dibujo-para-colorear-mahatma-gandhi-dm30409.jpg" alt="">
+        </div>
+    </div>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>

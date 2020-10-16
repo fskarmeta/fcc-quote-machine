@@ -1,0 +1,136 @@
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+        body {
+            height: 100vh;
+            width: auto;
+            background-color: white;
+        }
+        
+        .wrapper {
+            background-color: white;
+            width: 50vw;
+            height: 50vh;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+        
+        .quote {
+            min-width: 30vw;
+            max-width: 30vw;
+            display: flex;
+            flex-direction: column;
+            object-fit: contain;
+        }
+        
+        h1 {
+            margin: 1em 1em;
+            display: block;
+            min-height: 20vh;
+            object-fit: contain;
+            font-size: 2.5rem;
+            text-align: center;
+           
+            font-family: 'Amatic SC', cursive;
+        }
+        
+        @media (max-width: 1300px) {
+            h1 {
+                font-size: 3vw;
+            }
+        }
+        
+        @media (max-width: 940px) {
+            h1 {
+                font-size: 2.7vw;
+            }
+            .wrapper {
+                background-color: white;
+                width: 50vw;
+                height: 50vh;
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 790px) {
+            h1 {
+                font-size: 3.7vw;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 4vw;
+            }
+            h2 {
+                font-size: 3vw;
+            }
+        }
+
+        @media (max-width: 450px) {
+            h1 {
+                font-size: 4.5vw;
+            }
+            h2 {
+                font-size: 3vw;
+            }
+        }
+        
+        h2 {
+            display: block;
+            justify-self: end;
+            background-color: white;
+            text-align: end;
+            margin-right: 0.5em;
+            font-family: 'Amatic SC', cursive;
+            padding-right: 1em;
+        }
+        
+        .image {
+            background-color: white;
+        }
+        
+        img {
+            max-width: 25vw;
+            max-height: 90vp;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 1em 1em;
+            background-color: white;
+        }
+        
+        .button {
+            height: 38px;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            background-color: #333;
+            outline: none;
+            font-size: 0.85em;
+            opacity: 1;
+            cursor: pointer;
+            font-family: 'Amatic SC', cursive;
+            position: sticky;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        #tweet-quote {
+            padding-top: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            margin-right: 5px;
+            height: 30px;
+            width: 40px;
+        }
